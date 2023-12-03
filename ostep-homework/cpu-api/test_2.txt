@@ -1,1 +1,2 @@
-This is a test of hw 2.
+Parent is writing to the file
+Child is writing to the file
