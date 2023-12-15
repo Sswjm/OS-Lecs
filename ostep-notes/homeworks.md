@@ -51,3 +51,18 @@ Code:
 4 `python3 mlfq.py -n 3 -q 10 -l 0,50,0:0,50,9 -i 1 -S -c`  
 5 `python3 mlfq.py -n 3 -q 10 -l 0,200,0:0,200,1:0,200,1 -i 1 -S -B 200 -c`  
 6 `python3 mlfq.py -n 2 -q 10 -l 0,50,0:0,50,11 -i 1 -S -I -c`
+
+# Ch.9 调度：比例份额（Scheduling Proportional Share）  
+1 略，明白彩票调度的执行过程即可。注意winner的产生是根据$随机数 % 彩票总数$来计算的  
+2 job0在job1完成之前很难获得处理机；有可能会运行，概率为1/100；导致资源分配不公平  
+3 $U = \frac{192}{200} = 0.96$，其他随机种子可以使用-s参数调整，结果略。 
+4 随着时间片长度的增加，调度算法的公平性会逐渐降低（可以查看https://github.com/xxyzz/ostep-hw/tree/master/9 中的图像）     
+q = 2时，$U = \frac{188}{200} = 0.94$  
+q = 3时，$U = \frac{201}{204} = 0.985$
+q = 4时，$U = \frac{176}{200} = 0.88$   
+
+# Ch.10 多处理器调度（高级）  
+学完并发相关内容再来读  
+
+# Ch.13 抽象：地址空间（Abstraction:Address Spaces）
+编程作业位于`ostep-homework/vm-address-space`  
